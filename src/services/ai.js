@@ -18,7 +18,7 @@ const clean = (m) => ({
 const getMovies = async (url) => {
   const res = await fetch(`${TMDB}${url}&api_key=${TMDB_KEY}`);
   const data = await res.json();
-  return data.results?.slice(0, 12).map(clean) || [];
+  return data.results?.slice(0, 20).map(clean) || [];
 };
 
 // 4. Groq se mood ke hisab se 3 movies ke naam lo + TMDB se poster/trailer
