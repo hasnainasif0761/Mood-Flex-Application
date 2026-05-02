@@ -32,7 +32,7 @@ function MovieRow({title,movies}) {
             className='px-2 gap-3 flex overflow-x-auto py-1 w-[98%] mx-auto mt-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden scroll-smooth'
              >
             {movies.map((movie) => (
-            <MovieCard key={movie.id} image={movie.poster} title={movie.title} desc={movie.overview} year={movie.year} />
+            <MovieCard key={movie.id} id={movie.id} image={movie.poster} title={movie.title} desc={movie.overview} year={movie.year} />
             ))}
              </div>
         </>

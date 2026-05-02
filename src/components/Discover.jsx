@@ -41,7 +41,7 @@ function Discover() {
   },[])
 
   return (
-    <div className='border-red-300 border md:max-w-[82%] w-full h-screen overflow-y-auto'>
+    <div className=' md:max-w-[82%] w-full h-screen overflow-y-auto'>
       <h1 className='text-3xl mt-7 ml-3 font-medium'>Discover Movie</h1>
       { isLoading ? 
       <>

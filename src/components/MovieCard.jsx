@@ -1,8 +1,14 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
-function MovieCard({image,title,desc,year}) {
+function MovieCard({id,image,title,desc,year}) {
+  const navigate = useNavigate()
+  function handleClick(){
+    navigate(`/movie/${id}`)
+  }
+  
   return (
-    <div className="w-[250px] flex-shrink-0 cursor-pointer border-2 hover:shadow-cyan-500/50 shadow-sm hover:border-blue-300 h-[300px] rounded-sm overflow-hidden">
+    <div onClick={handleClick} className="w-[250px] flex-shrink-0 cursor-pointer border-2 hover:shadow-cyan-500/50 shadow-sm hover:border-blue-300 h-[300px] rounded-sm overflow-hidden">
       <div className="w-full h-[230px] border border-black">
         <img
           src={image}
